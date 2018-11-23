@@ -94,7 +94,7 @@ func handleRequests() {
 	myRouter.HandleFunc("/user/{name}", deleteUser).Methods("DELETE")
 	myRouter.HandleFunc("/user/{name}/{email}", updateUser).Methods("PUT")
 	myRouter.HandleFunc("/user/{name}/{email}", newUser).Methods("POST")
-	log.Fatal(http.ListenAndServe(":8081", myRouter))
+	log.Fatal(http.ListenAndServe(":8000", myRouter))
 }
 
 func initialMigration() {
